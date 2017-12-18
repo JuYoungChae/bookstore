@@ -1,12 +1,17 @@
 package io.pnt.edu.bookstore.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Service;
 
 import io.pnt.edu.bookstore.dto.Book;
 import io.pnt.edu.bookstore.service.BookService;
 
+@Service("csvBookServiceImpl")
 public class CsvBookServiceImpl implements BookService{
-
+	private List<Book> bookList = new ArrayList<>();
+	
 	@Override
 	public List<Book> findAll() {
 		// TODO Auto-generated method stub
